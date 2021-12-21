@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.Extensions.AttributedBehaviors", "MediatR.Extensions.AttributedBehaviors\MediatR.Extensions.AttributedBehaviors.csproj", "{B83B4E12-1408-4852-8BDC-7BA88CE4C70B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBEB5124-0038-49B9-92B2-35E9CE383124}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B83B4E12-1408-4852-8BDC-7BA88CE4C70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83B4E12-1408-4852-8BDC-7BA88CE4C70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83B4E12-1408-4852-8BDC-7BA88CE4C70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83B4E12-1408-4852-8BDC-7BA88CE4C70B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C3F9E5-FD9D-4BDE-ACF3-D103B7B6E69F}
+	EndGlobalSection
+EndGlobal

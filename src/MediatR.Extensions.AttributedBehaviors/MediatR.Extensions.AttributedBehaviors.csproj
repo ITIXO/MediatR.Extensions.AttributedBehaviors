@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<Authors>ITIXO</Authors>
+	<Description>MediatR extension adding ability to specify pipeline behaviors using attributes on command class.</Description>
+	<Copyright>Copyright (c) ITIXO</Copyright>
+	<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+	<Nullable>enable</Nullable>
+	<Features>strict</Features>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+	<PackageProjectUrl>https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
