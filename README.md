@@ -2,8 +2,21 @@
 
 MediatR extension adding ability to specify pipeline behaviors using attributes on command class.
 
-Ever found yourself confused when searching for bahviors that are attached to the pipeline you are about to debug? 
+Ever found yourself confused when looking for behaviors that are attached to the pipeline you are about to debug? 
 Keeping all behaviors specified within the command class makes it really clear.
+
+```csharp
+
+// Instead of this
+ services.AddScoped<IPipelineBehavior<MyRequest, MyReturnType>, MyFirstPipelineBehavior<MyRequest, MyReturnType>>()
+         .AddScoped<IPipelineBehavior<MyRequest, MyReturnType>, MySecondPipelineBehavior<MyRequest, MyReturnType>>();
+
+// You write this
+[MediatRBehavior(typeof(MyFirstPipelineBehavior<MyRequest, MyReturnType>))]
+[MediatRBehavior(typeof(MySecondPipelineBehavior<MyRequest, MyReturnType>))]
+public class MyRequest : IRequest<MyReturnType> { }
+```
+You immediately see all the behaviors your request passes through! no need to search in `Service Collection Extension` and matching data types to see what behaviors are in use.
 
 # Install
 
