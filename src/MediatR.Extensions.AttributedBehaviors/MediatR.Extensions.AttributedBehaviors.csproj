@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<Authors>ITIXO</Authors>
@@ -8,7 +8,9 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
-	<PackageProjectUrl>https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>MediatR</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

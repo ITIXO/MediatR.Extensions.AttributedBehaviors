@@ -29,7 +29,7 @@ jobs:
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
       working-directory: src
     - name: Push
-      run: dotnet nuget push MediatR.Extensions.AttributedBehaviors.${VERSION}.nupkg --source https://nuget.pkg.github.com/ITIXO/index.json --api-key ${NUGET_TOKEN}
+      run: dotnet nuget push MediatR.Extensions.AttributedBehaviors.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
       working-directory: src
       env:
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
