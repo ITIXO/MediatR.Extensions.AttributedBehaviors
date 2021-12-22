@@ -1,5 +1,9 @@
 # MediatR.Extensions.AttributedBehaviors
 
+![CI](https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors/actions/workflows/CI/badge.svg)
+[![NuGet](https://img.shields.io/nuget/vpre/MediatR.Extensions.AttributedBehaviors.svg)](https://www.nuget.org/packages/MediatR.Extensions.AttributedBehaviors)
+
+
 MediatR extension adding ability to specify pipeline behaviors using attributes on command class.
 
 Ever found yourself confused when looking for behaviors that are attached to the pipeline you are about to debug? 
