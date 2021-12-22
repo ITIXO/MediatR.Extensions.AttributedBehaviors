@@ -1,6 +1,6 @@
 # MediatR.Extensions.AttributedBehaviors
 
-![CI](https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors/actions/workflows/CI/badge.svg)
+[![CI](https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors/actions/workflows/ci.yml/badge.svg)](https://github.com/ITIXO/MediatR.Extensions.AttributedBehaviors/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/vpre/MediatR.Extensions.AttributedBehaviors.svg)](https://www.nuget.org/packages/MediatR.Extensions.AttributedBehaviors)
 
 
