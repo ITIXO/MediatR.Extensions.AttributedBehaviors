@@ -20,7 +20,8 @@ Keeping all behaviors specified within the command class makes it really clear.
 [MediatRBehavior(typeof(MySecondPipelineBehavior<MyRequest, MyReturnType>))]
 public class MyRequest : IRequest<MyReturnType> { }
 ```
-You immediately see all the behaviors your request passes through! no need to search in `Service Collection Extension` and matching data types to see what behaviors are in use.
+You immediately see all the behaviors your request passes through in order as they are specified. 
+No need to search in your code base for behaviors installation to see what behaviors are used.
 
 # Install
 
