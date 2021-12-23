@@ -4,7 +4,8 @@
 [![NuGet](https://img.shields.io/nuget/vpre/MediatR.Extensions.AttributedBehaviors.svg)](https://www.nuget.org/packages/MediatR.Extensions.AttributedBehaviors)
 
 
-MediatR extension adding ability to specify pipeline behaviors using attributes on command class.
+MediatR extension adding ability to specify pipeline behaviors using attributes on command class. 
+Leverages `Microsoft.Extensions.DependencyInjection` as a DI container.
 
 Ever found yourself confused when looking for behaviors that are attached to the pipeline you are about to debug? 
 Keeping all behaviors specified within the command class makes it really clear.
@@ -38,7 +39,7 @@ dotnet add package MediatR.Extensions.AttributedBehaviors
 
 # How to use
 
-## Setup - Add configuration in startup 
+## Setup - Add configuration in startup.cs
 
 
 ```csharp
@@ -49,10 +50,14 @@ public void ConfigureServices(IServiceCollection services)
     // Add MediatR
     services.AddMediatR(executingAssembly);
 
+    // optionally register open generics universal behaviors (e.g. logging)
+    // before registering attributed behaviors
+    services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingPipelineBehavior<,>));
+
     //Add Attributed Behaviors
     services.AddMediatRAttributeBehaviors(executingAssembly);
     
-    //Add other stuffs
+    //Add other stuff
     ...
 }
 
