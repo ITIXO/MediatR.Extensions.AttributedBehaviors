@@ -9,8 +9,8 @@ namespace MediatR.Extensions.AttributedBehaviors
     public static class ServiceCollectionExtensions
     {
 
-        public static IServiceCollection AddMediatRAttributedBehaviors(this IServiceCollection services, params Assembly[] assemblies)
-            => services.AddMediatRAttributedBehaviors(assemblies);
+        public static IServiceCollection AddMediatRAttributedBehaviors(this IServiceCollection services, Assembly assembly)
+            => services.AddMediatRAttributedBehaviors(new[] { assembly });
 
         public static IServiceCollection AddMediatRAttributedBehaviors(this IServiceCollection services, IEnumerable<Assembly> assemblies)
         {
