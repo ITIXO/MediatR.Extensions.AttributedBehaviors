@@ -14,11 +14,11 @@ Keeping all behaviors specified within the command class makes it really clear.
 
 // Instead of this
  services.AddScoped<IPipelineBehavior<MyRequest, MyReturnType>, MyFirstPipelineBehavior<MyRequest, MyReturnType>>()
-         .AddScoped<IPipelineBehavior<MyRequest, MyReturnType>, MySecondPipelineBehavior<MyRequest, MyReturnType>>();
+         .AddScoped<IPipelineBehavior<MyRequest, MyReturnType>, MySecondPipelineBehavior>();
 
 // You write this
 [MediatRBehavior(typeof(MyFirstPipelineBehavior<MyRequest, MyReturnType>))]
-[MediatRBehavior(typeof(MySecondPipelineBehavior<MyRequest, MyReturnType>))]
+[MediatRBehavior(typeof(MySecondPipelineBehavior))]
 public class MyRequest : IRequest<MyReturnType> { }
 ```
 You immediately see all the behaviors your request passes through in order as they are specified. 
