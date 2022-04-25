@@ -104,3 +104,19 @@ By default, behaviors are orders as they are specified top-to-bottom. If you eve
 [MediatRBehavior(typeof(FirstPipelineBehavior<MyQuery>), order: 1)]
 public class MyQuery : IRequest
 ```
+
+## Changelog
+
+### 2.0.0
+Updated MediatR dependency to 10.x
+Dropped support for netstandard2.0
+
+### 1.0.1
+Fixed Service collection extensions
+Added unit tests
+
+### 1.0.1
+Matched dependencies versions with MediatR
+
+### 1.0.0
+Initial version
