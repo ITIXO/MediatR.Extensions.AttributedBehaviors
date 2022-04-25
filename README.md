@@ -96,7 +96,7 @@ public class MyQuery : IRequest
 
 ## Custom behavior ordering
 
-By default, behaviors are orders as they are specified top-to-bottom. If you ever need to specify your custom ordering, you can.
+By default, behaviors are ordered based on the line number - as they are specified top-to-bottom. If you ever need to specify your custom ordering, you can.
 ```csharp
 
 // override default top->bottom ordering
@@ -108,15 +108,15 @@ public class MyQuery : IRequest
 ## Changelog
 
 ### 2.0.0
-Updated MediatR dependency to 10.x
-Dropped support for netstandard2.0
+- Updated MediatR dependency to 10.x
+- Dropped support for netstandard2.0
 
 ### 1.0.1
-Fixed Service collection extensions
-Added unit tests
+- Fixed Service collection extensions
+- Added unit tests
 
 ### 1.0.1
-Matched dependencies versions with MediatR
+- Matched dependencies versions with MediatR
 
 ### 1.0.0
-Initial version
+- Initial version
