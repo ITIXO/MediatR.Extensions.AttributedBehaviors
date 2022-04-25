@@ -111,7 +111,7 @@ public class MyQuery : IRequest
 - Updated MediatR dependency to 10.x
 - Dropped support for netstandard2.0
 
-### 1.0.1
+### 1.0.2
 - Fixed Service collection extensions
 - Added unit tests
 
