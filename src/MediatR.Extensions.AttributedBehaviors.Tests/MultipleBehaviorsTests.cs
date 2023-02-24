@@ -45,7 +45,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
                 _output = output;
             }
 
-            public async Task<Pong> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<Pong> next)
+            public async Task<Pong> Handle(Ping request, RequestHandlerDelegate<Pong> next, CancellationToken cancellationToken)
             {
                 _output.Messages.Add("Outer before");
                 var response = await next();
@@ -64,7 +64,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
                 _output = output;
             }
 
-            public async Task<Pong> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<Pong> next)
+            public async Task<Pong> Handle(Ping request, RequestHandlerDelegate<Pong> next, CancellationToken cancellationToken)
             {
                 _output.Messages.Add("Inner before");
                 var response = await next();
@@ -81,7 +81,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
             IServiceCollection services = new ServiceCollection();
             services.AddSingleton(output);
             var assembly = typeof(Ping).GetTypeInfo().Assembly;
-            services.AddMediatR(assembly);
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
             services.AddMediatRAttributedBehaviors(assembly);
 
             var provider = services.BuildServiceProvider();
