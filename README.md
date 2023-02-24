@@ -106,6 +106,10 @@ public class MyQuery : IRequest
 ```
 
 ## Changelog
+### 3.0.0
+- Updated MediatR dependency to 12.x
+- Dropped direct reference to Microsoft.Extensions.DependencyInjection.Abstractions
+- Updated tests based on breaking changes from MediatR 12.x
 
 ### 2.0.0
 - Updated MediatR dependency to 10.x

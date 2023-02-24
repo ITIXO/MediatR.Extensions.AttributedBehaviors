@@ -33,7 +33,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
 
         public class TransientBehavior : IPipelineBehavior<Ping, Pong>
         {
-            public Task<Pong> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<Pong> next)
+            public Task<Pong> Handle(Ping request, RequestHandlerDelegate<Pong> next, CancellationToken cancellationToken)
             {
                 return next();
             }
@@ -41,7 +41,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
 
         public class SingletonBehavior : IPipelineBehavior<Ping, Pong>
         {
-            public Task<Pong> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<Pong> next)
+            public Task<Pong> Handle(Ping request, RequestHandlerDelegate<Pong> next, CancellationToken cancellationToken)
             {
                 return next();
             }
@@ -49,7 +49,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
         
         public class ScopedBehavior : IPipelineBehavior<Ping, Pong>
         {
-            public Task<Pong> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<Pong> next)
+            public Task<Pong> Handle(Ping request, RequestHandlerDelegate<Pong> next, CancellationToken cancellationToken)
             {
                 return next();
             }
@@ -95,7 +95,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
         {
             IServiceCollection services = new ServiceCollection();
             var assembly = typeof(Ping).GetTypeInfo().Assembly;
-            services.AddMediatR(assembly);
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
             services.AddMediatRAttributedBehaviors(assembly);
 
             var provider = services.BuildServiceProvider();
