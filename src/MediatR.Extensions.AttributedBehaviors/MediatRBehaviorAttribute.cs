@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace MediatR.Extensions.AttributedBehaviors
 {
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true)]
     public class MediatRBehaviorAttribute : Attribute
     {
         public Type BehaviorType { get; }
