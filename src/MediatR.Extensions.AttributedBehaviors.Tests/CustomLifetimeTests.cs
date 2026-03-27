@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Shouldly;
 using System.Linq;
 using System.Reflection;
@@ -95,6 +96,7 @@ namespace MediatR.Extensions.AttributedBehaviors.Tests
         {
             IServiceCollection services = new ServiceCollection();
             var assembly = typeof(Ping).GetTypeInfo().Assembly;
+            services.AddLogging();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
             services.AddMediatRAttributedBehaviors(assembly);
 
